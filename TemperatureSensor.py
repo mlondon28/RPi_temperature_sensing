@@ -23,7 +23,7 @@ class DHT11_Temperature_Sensor:
 			print("Error: %d" % result.error_code)
 	
 	def get_degrees_c(self):
-		result = instance.read()
+		result = self.instance.read()
 		if result.is_valid():
 			print("Temperature (C): %-3.1f C" % result.temperature)
 
@@ -31,7 +31,7 @@ class DHT11_Temperature_Sensor:
 			print("Error: %d" % result.error_code)
 
 	def get_humidity(self):
-		result = instance.read()
+		result = self.instance.read()
 		if result.is_valid():
 			print("Humidity: %-3.1f %%" % result.humidity)
 		else:
