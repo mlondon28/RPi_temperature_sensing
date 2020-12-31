@@ -13,7 +13,7 @@ class DHT11_Temperature_Sensor:
 		GPIO.cleanup()
 
 		self.instance = dht11.DHT11(self.pin)
-		result = instance.read()
+		result = self.instance.read()
 
 	def get_degrees_f(self):
 		result = self.instance.read()
